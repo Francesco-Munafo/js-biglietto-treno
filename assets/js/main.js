@@ -34,11 +34,20 @@ const userName = prompt('Come ti chiami?')
 // Chiedo all'utente quanti km deve percorrere e trasformo il valore in numero
 
 const kilometers = Number(prompt('Quanti chilometri devi percorrere? es. 1.5'));
+
+// Aggiungo il controllo dei dati inseriti
+
+if (kilometers.NaN || kilometers <= 0)
+  alert('Inserisci solo valori numerici superiori a 0!')  
+
+
 console.log(kilometers);
 
 //Chiedo all'utente la sua età
 
 const userAge = Number(prompt('Quanti anni hai?'));
+if (userAge.NaN || userAge <= 0)
+  alert('Inserisci solo valori numerici superiori a 0!')
 console.log(userAge);
 
 // Calcolo il prezzo in base al costo/km e all'età arrotondando il prezzo
